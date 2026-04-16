@@ -1,74 +1,51 @@
 # 📸 Instafake UI
 
-A frontend project inspired by Instagram’s interface, focused on building a clean, responsive, and visually accurate user interface using modern CSS practices and Sass.
+Clon de la interfaz de Instagram, enfocado en layout, estilos y diseño responsive usando Sass. Este es un proyecto de demostración de UI sin funcionalidad backend.
 
 ---
 
-## 🌐 Live Demo
+## 🧠 Sobre el Proyecto
 
-👉 https://TU-LINK-AQUI
+Proyecto desarrollado para practicar técnicas avanzadas de layout y mejorar habilidades de estilos recreando una interfaz familiar de red social.
 
----
-
-## 🧠 About the Project
-
-This project was developed to practice advanced layout techniques and improve styling skills by recreating a familiar social media interface.
-
-The goal was not to replicate functionality, but to focus on UI structure, visual hierarchy, and responsive behavior.
+El objetivo es demostrar estructura de UI, jerarquía visual y comportamiento responsive.
 
 ---
 
 ## ⚙️ Tech Stack
 
-* HTML
-* CSS
-* Sass
+- HTML5 semántico
+- CSS3
+- Sass (SCSS)
+- JavaScript vanilla (micro-interacciones)
 
 ---
 
-## ✨ Key Features
+## ✨ Características
 
-* 📱 Responsive layout
-* 🎨 Clean and structured UI
-* 🧩 Component-based styling using Sass
-* 📐 Flexbox and layout techniques
-
----
-
-## 🧠 Technical Highlights
-
-* Use of Sass for better organization and scalability of styles
-* Separation of styling into reusable components
-* Responsive design approach for different screen sizes
-* Focus on visual hierarchy and spacing
+- 📱 Layout responsive (mobile, tablet, desktop)
+- 🎨 UI limpia y estructurada
+- 🧩 Estilos basados en componentes con Sass
+- 📐 Flexbox y técnicas modernas de layout
+- ❤️ Micro-interacciones con JavaScript
 
 ---
 
-## 🎯 What I Learned
+## 🎥 Vista Previa
 
-* How to structure scalable CSS using Sass
-* How to recreate complex layouts
-* How to think in components when designing UI
-* How to improve visual consistency
+![Instafake UI Preview](assets/preview.png)
 
 ---
 
-## 🎥 Preview
+## 👩‍💻 Autora
 
-![UI Screenshot](assets/screenshot1.png)
-![UI Screenshot](assets/screenshot2.png)
+**María Brown**
 
----
-
-## 👩‍💻 Author
-
-María Brown
-
-* GitHub: https://github.com/MarayaBrown
-* LinkedIn: https://www.linkedin.com/in/brownmaría/
+- GitHub: [github.com/MarayaBrown](https://github.com/MarayaBrown)
+- LinkedIn: [linkedin.com/in/brownmaría](https://www.linkedin.com/in/brownmar%C3%ADa/)
 
 ---
 
-## 🚀 Final Note
+## 📝 Nota Final
 
-This project focuses on frontend design and layout skills, complementing more logic-driven applications in my portfolio.
+Este proyecto se enfoca en habilidades de diseño frontend y layout, complementando aplicaciones más lógicas en mi portfolio.
