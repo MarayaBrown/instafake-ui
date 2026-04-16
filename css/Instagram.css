@@ -50,153 +50,256 @@ table {
 }
 
 body {
-  color: #000;
+  color: rgb(38, 38, 38);
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
-  background-color: rgb(252, 247, 241);
+  background-color: rgb(250, 250, 250);
+  min-height: 100vh;
 }
 
 h1 {
   font-family: "Satisfy", cursive;
 }
 
-.card {
-  max-width: 300px;
-  min-width: 280px;
-  background-color: rgb(250, 250, 250);
-  padding: 0.5rem;
-  border: 1px solid rgb(201, 201, 201);
-  box-shadow: 1px 3px 5px rgb(201, 201, 201);
-  border-radius: 0.3rem;
+main {
+  max-width: 935px;
+  margin: 0 auto;
+  padding: 1.5rem 0;
 }
-.card a {
-  color: rgb(53, 52, 52);
-  padding: 0.25rem;
-  font-size: 1.1rem;
-  font-weight: bold;
+
+.deck {
+  max-width: 935px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  width: 100%;
+  max-width: 320px;
+  min-width: 280px;
+  flex: 1;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgb(219, 219, 219);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.card .user-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgb(38, 38, 38);
+  padding: 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 600;
   text-decoration: none;
 }
-.card a:hover {
-  text-shadow: 1px 1px rgb(201, 201, 201);
+.card .user-link i {
+  font-size: 2rem;
+  color: rgb(142, 142, 142);
+}
+.card .user-link:hover {
+  text-decoration: underline;
 }
 .card header {
-  padding: 0.25rem;
-  font-size: 1.1rem;
-  font-weight: bold;
-  line-height: 1;
-  text-decoration: none;
-  color: rgb(53, 52, 52);
-  border-bottom: 1px solid rgb(201, 201, 201);
+  display: flex;
+  align-items: center;
+  padding: 0 0.75rem 0.5rem;
+  border-bottom: none;
 }
 .card figure {
-  padding: 0.25rem;
-  height: auto;
-  width: 95%;
-  border-bottom: 1px solid rgb(201, 201, 201);
+  padding: 0;
+  margin: 0;
 }
 .card figure img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
   aspect-ratio: 1/1;
   display: block;
   object-fit: cover;
 }
+.card footer {
+  padding: 0.75rem;
+}
 .card footer .button-wrapper {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.5rem;
 }
-.card footer .button-wrapper div {
+.card footer .button-wrapper .action-buttons {
   display: flex;
+  gap: 0.75rem;
 }
 .card footer button {
-  color: rgb(53, 52, 52);
-  font-size: 1.5rem;
+  color: rgb(38, 38, 38);
+  font-size: 1.4rem;
   background: none;
   border: none;
-  display: grid;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s ease, transform 0.1s ease;
 }
 .card footer button:hover {
-  text-shadow: 1px 1px rgb(201, 201, 201);
-  color: rgb(243, 44, 44);
+  color: rgb(237, 73, 86);
+  transform: scale(1.1);
+}
+.card footer button.save:hover {
+  color: rgb(38, 38, 38);
 }
 .card footer p {
-  color: rgb(53, 52, 52);
-  padding: 0.25rem;
+  color: rgb(38, 38, 38);
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+}
+.card footer p .user-link {
+  padding: 0;
+  font-size: 0.9rem;
+}
+.card footer p .user-link i {
+  font-size: 1rem;
 }
 .card footer .comments {
-  color: rgb(77, 76, 76);
-  font-size: 0.9rem;
-  padding: 0.1rem;
+  color: rgb(142, 142, 142);
+  font-size: 0.85rem;
+  margin-bottom: 0.25rem;
+  cursor: pointer;
+}
+.card footer .comments:hover {
+  text-decoration: underline;
 }
 .card footer .time {
-  color: rgb(77, 76, 76);
+  color: rgb(142, 142, 142);
   text-transform: uppercase;
-  font-size: 0.75rem;
-  padding: 0.1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.5px;
 }
 
-.deck {
-  max-width: 1000px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: left;
-  gap: 1.2rem;
-  padding: 0 1rem;
+@media screen and (max-width: 768px) {
+  .deck {
+    padding: 0 0.75rem;
+    gap: 1rem;
+  }
+  .card {
+    max-width: 100%;
+    min-width: 100%;
+  }
 }
-
+@media screen and (max-width: 480px) {
+  .deck {
+    padding: 0;
+    gap: 0.75rem;
+  }
+  .card {
+    border-radius: 0;
+    border-left: none;
+    border-right: none;
+  }
+  .card:hover {
+    transform: none;
+  }
+}
 .navbar {
   position: sticky;
   top: 0;
-  height: 3rem;
-  background-color: rgb(250, 250, 250);
-  border: 1px solid rgb(201, 201, 201);
-  display: grid;
-  grid-template-columns: 3fr 6fr 3fr;
+  height: 3.5rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid rgb(219, 219, 219);
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
+  padding: 0 1rem;
+  z-index: 100;
 }
 .navbar .logotipo {
   display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 .navbar .logotipo img {
-  height: 10%;
-  width: 10%;
-  padding: 0.25rem;
+  height: 2rem;
+  width: auto;
 }
 .navbar .logotipo h1 {
-  font-size: 2rem;
-  position: 1;
-  padding: 0.25rem;
-  background: -webkit-linear-gradient(90deg, rgb(131, 58, 180) 0%, rgb(253, 29, 29) 50%, rgb(252, 176, 69) 100%);
+  font-size: 1.75rem;
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 .navbar input {
-  border: none;
-  box-shadow: 0px 1px 2px rgb(201, 201, 201);
-  border-radius: 0.3rem;
-  background-color: rgb(252, 247, 241);
-  position: 2;
+  flex: 1;
+  max-width: 14rem;
+  padding: 0.4rem 1rem;
+  border: 1px solid rgb(219, 219, 219);
+  border-radius: 0.5rem;
+  background-color: rgb(250, 250, 250);
+  text-align: center;
+  font-size: 0.9rem;
+}
+.navbar input::placeholder {
+  color: rgb(142, 142, 142);
+}
+.navbar input:focus {
+  outline: 1px solid rgb(237, 73, 86);
+  border-color: rgb(237, 73, 86);
+}
+.navbar .buttons-nav {
+  display: flex;
+  gap: 1.25rem;
 }
 .navbar .buttons-nav button {
-  color: rgb(53, 52, 52);
-  font-size: 1.5rem;
+  color: rgb(38, 38, 38);
+  font-size: 1.4rem;
   background: none;
   border: none;
-  display: inline;
+  cursor: pointer;
+  transition: color 0.2s ease;
 }
 .navbar .buttons-nav button:hover {
-  text-shadow: 1px 1px rgb(201, 201, 201);
-  color: rgb(243, 44, 44);
+  color: rgb(237, 73, 86);
 }
 @media screen and (max-width: 1024px) {
-  .navbar .buttons-nav .home {
+  .navbar .buttons-nav .home, .navbar .buttons-nav .chat, .navbar .buttons-nav .compass {
     display: none;
   }
-  .navbar .buttons-nav .chat {
+}
+@media screen and (max-width: 768px) {
+  .navbar {
+    padding: 0 0.75rem;
+  }
+  .navbar .logotipo h1 {
     display: none;
   }
-  .navbar .buttons-nav .compass {
+  .navbar input {
+    max-width: 10rem;
+  }
+  .navbar .buttons-nav {
+    gap: 1rem;
+  }
+  .navbar .buttons-nav button {
+    font-size: 1.2rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .navbar input {
     display: none;
   }
-}/*# sourceMappingURL=Instagram.css.map */
+  .navbar .buttons-nav {
+    gap: 0.75rem;
+  }
+  .navbar .buttons-nav button {
+    font-size: 1.1rem;
+  }
+}
+
+/*# sourceMappingURL=Instagram.css.map */
