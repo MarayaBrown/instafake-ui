@@ -1,51 +1,102 @@
-# 📸 Instafake UI
+# Instafake UI
 
-Clon de la interfaz de Instagram, enfocado en layout, estilos y diseño responsive usando Sass. Este es un proyecto de demostración de UI sin funcionalidad backend.
+A UI showcase project simulating an Instagram-style social media interface. Built with focus on layout precision, responsive design, and modern CSS techniques.
 
 ---
 
-## 🧠 Sobre el Proyecto
+## 🌐 Live Demo
 
-Proyecto desarrollado para practicar técnicas avanzadas de layout y mejorar habilidades de estilos recreando una interfaz familiar de red social.
+👉 [https://instafake-ui.vercel.app/](https://instafake-ui.vercel.app/)
 
-El objetivo es demostrar estructura de UI, jerarquía visual y comportamiento responsive.
+---
+
+## 📱 Screenshots
+
+### Desktop View
+![Desktop](./assets/screenshots/desktop.png)
+
+### Mobile View
+![Mobile](./assets/screenshots/mobile.png)
+
+### Post Detail
+![Post Detail](./assets/screenshots/post-detail.png)
+
+---
+
+## 🎯 About This Project
+
+**Instafake UI** is a frontend showcase project that demonstrates:
+
+- **Layout mastery**: Recreating a familiar social media interface
+- **CSS/Sass expertise**: Component-based styling with SCSS
+- **Responsive design**: Seamless experience across all devices
+- **Attention to detail**: Micro-interactions and visual polish
+
+> This is a **UI-only demo**. No backend functionality is implemented. The focus is entirely on frontend design and development skills.
+
+---
+
+## ✨ Features
+
+- 📱 **Responsive Layout** — Optimized for mobile, tablet, and desktop
+- 🎨 **Component-based CSS** — Clean architecture using Sass/SCSS
+- 🧩 **Reusable UI Patterns** — Cards, navbar, action buttons
+- ⚡ **Micro-interactions** — Like and save button animations
+- 📐 **Modern Layout Techniques** — Flexbox and CSS Grid
+- 🔍 **Accessibility** — Semantic HTML and ARIA labels
 
 ---
 
 ## ⚙️ Tech Stack
 
-- HTML5 semántico
-- CSS3
-- Sass (SCSS)
-- JavaScript vanilla (micro-interacciones)
+| Technology | Purpose |
+|------------|---------|
+| HTML5 | Semantic markup |
+| CSS3 | Styling and animations |
+| Sass (SCSS) | Component-based styles |
+| JavaScript | Micro-interactions |
+| Font Awesome | Icon library |
 
 ---
 
-## ✨ Características
+## 🗂️ Project Structure
 
-- 📱 Layout responsive (mobile, tablet, desktop)
-- 🎨 UI limpia y estructurada
-- 🧩 Estilos basados en componentes con Sass
-- 📐 Flexbox y técnicas modernas de layout
-- ❤️ Micro-interacciones con JavaScript
+```
+├── index.html          # Main page
+├── css/
+│   └── Instagram.css   # Compiled styles
+├── Sass/               # SCSS source files
+│   ├── _base.scss
+│   ├── _cards.scss
+│   ├── _variables.scss
+│   └── Instagram.scss
+├── js/
+│   └── interactions.js # Like/save interactions
+├── data/               # Images
+└── README.md
+```
 
 ---
 
-## 🎥 Vista Previa
+## 🎓 What This Project Demonstrates
 
-![Instafake UI Preview](assets/preview.png)
+- **CSS Architecture**: Organizing styles into maintainable modules
+- **Visual Hierarchy**: Creating clear information architecture
+- **Design Fidelity**: Accurately reproducing a known interface
+- **Code Quality**: Clean, well-structured, readable code
 
 ---
 
-## 👩‍💻 Autora
+## 👩‍💻 Author
 
-**María Brown**
+**María Brown**  
+Frontend Developer
 
 - GitHub: [github.com/MarayaBrown](https://github.com/MarayaBrown)
-- LinkedIn: [linkedin.com/in/brownmaría](https://www.linkedin.com/in/brownmar%C3%ADa/)
+- LinkedIn: [linkedin.com/in/brownmaria](https://www.linkedin.com/in/brownmar%C3%ADa/)
 
 ---
 
-## 📝 Nota Final
+## 📝 Note
 
-Este proyecto se enfoca en habilidades de diseño frontend y layout, complementando aplicaciones más lógicas en mi portfolio.
+This project focuses on frontend UI/UX skills, complementing more logic-driven applications in the portfolio. It showcases the ability to translate design mockups into pixel-perfect code.
