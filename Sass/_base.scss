@@ -69,9 +69,10 @@ h1 {
         h1 {
             font-size: 1.6rem;
             line-height: 1.2;
-            padding: 0.2rem 0;
+            padding: 0.2rem 0.3rem;
             margin: 0;
             background: $gradient-instagram;
+            background-size: 200% 100%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
