@@ -109,11 +109,14 @@ h1 {
   gap: 0.5rem;
 }
 .navbar .logotipo img {
-  height: 2rem;
+  height: 1.75rem;
   width: auto;
+  max-height: 1.75rem;
+  object-fit: contain;
 }
 .navbar .logotipo h1 {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
+  line-height: 1;
   background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

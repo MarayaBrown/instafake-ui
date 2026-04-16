@@ -60,12 +60,15 @@ h1 {
         gap: 0.5rem;
         
         img {
-            height: 2rem;
+            height: 1.75rem;
             width: auto;
+            max-height: 1.75rem;
+            object-fit: contain;
         }
         
         h1 {
-            font-size: 1.75rem;
+            font-size: 1.5rem;
+            line-height: 1;
             background: $gradient-instagram;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
