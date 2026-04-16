@@ -109,10 +109,10 @@ h1 {
   gap: 0.5rem;
 }
 .navbar .logotipo img {
-  height: 1.75rem;
   width: auto;
-  max-height: 1.75rem;
-  object-fit: contain;
+  max-width: 6rem;
+  height: auto;
+  padding: 0.2rem 0;
 }
 .navbar .logotipo h1 {
   font-size: 1.5rem;
