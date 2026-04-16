@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instafake</title>
+    <title>Instafake - UI Showcase</title>
     <meta name="description" content="Clon de UI de Instagram - Demo de CSS/Sass">
     <meta name="author" content="María Brown">
     <link rel="icon" href="data/instagram.png">
@@ -12,29 +12,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="showcase-banner">
+        <i class="fa fa-code" aria-hidden="true"></i>
+        <span>UI Showcase</span>
+        <span class="separator">•</span>
+        <span>Demo de layout y estilos con Sass (sin funcionalidad backend)</span>
+    </div>
+
     <nav class="navbar" aria-label="Navegación principal">
         <div class="logotipo">
             <img src="data/instagram.png" alt="Logo de Instafake">
             <h1>Instafake</h1>
         </div>
-        <input type="text" placeholder="Buscar..." aria-label="Buscar usuarios">
+        <input type="text" placeholder="Buscar..." aria-label="Buscar usuarios" disabled>
         <div class="buttons-nav">
-            <button class="home" aria-label="Inicio"><i class="fa fa-lg fa-home"></i></button>
-            <button class="chat" aria-label="Mensajes"><i class="fa fa-lg fa-paper-plane"></i></button>
-            <button class="camera" aria-label="Publicar"><i class="fa fa-lg fa-plus-square"></i></button>
-            <button class="compass" aria-label="Explorar"><i class="fa fa-lg fa-compass"></i></button>
-            <button class="like" aria-label="Actividad"><i class="fa fa-lg fa-heart"></i></button>
-            <button class="user" aria-label="Perfil"><i class="fa fa-lg fa-user-circle"></i></button>
+            <button class="home disabled" aria-label="Inicio"><i class="fa fa-lg fa-home"></i></button>
+            <button class="chat disabled" aria-label="Mensajes"><i class="fa fa-lg fa-paper-plane"></i></button>
+            <button class="camera disabled" aria-label="Publicar"><i class="fa fa-lg fa-plus-square"></i></button>
+            <button class="compass disabled" aria-label="Explorar"><i class="fa fa-lg fa-compass"></i></button>
+            <button class="activity disabled" aria-label="Actividad"><i class="fa fa-lg fa-heart"></i></button>
+            <button class="user disabled" aria-label="Perfil"><i class="fa fa-lg fa-user-circle"></i></button>
         </div>
     </nav>
+
     <main>
         <section class="deck">
             <article class="card">
                 <header>
-                    <a href="#surf-pics" class="user-link">
+                    <div class="user-info">
                         <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        <span>surf.pics</span>
-                    </a>
+                        <span class="username">surf.pics</span>
+                    </div>
+                    <button class="more-options disabled" aria-label="Más opciones"><i class="fa fa-ellipsis-h"></i></button>
                 </header>
                 <figure>
                     <img src="data/Image (1).jpg" alt="Surfista surfeando una ola gigante en el océano" loading="lazy">
@@ -42,25 +51,32 @@
                 <footer>
                     <div class="button-wrapper"> 
                         <div class="action-buttons">
-                            <button class="like" aria-label="Me gusta"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                            <button class="send" aria-label="Enviar"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                            <button class="comment" aria-label="Comentar"><i class="fa fa-comment" aria-hidden="true"></i></button>              
+                            <button class="like-btn" aria-label="Me gusta" data-liked="false">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button class="send-btn disabled" aria-label="Enviar"><i class="fa fa-paper-plane"></i></button>
+                            <button class="comment-btn disabled" aria-label="Comentar"><i class="fa fa-comment"></i></button>              
                         </div>
                         <div>
-                            <button class="save" aria-label="Guardar"><i class="fa fa-bookmark" aria-hidden="true"></i></button>
+                            <button class="save-btn" aria-label="Guardar" data-saved="false">
+                                <i class="fa fa-bookmark"></i>
+                            </button>
                         </div>              
                     </div>
-                    <p><a href="#surf-pics" class="user-link"><i class="fa fa-user-circle" aria-hidden="true"></i> surf.pics</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores sequi, enim consequuntur quia ad?</p>
+                    <p class="likes-count">Les gusta a 127 personas</p>
+                    <p class="caption"><span class="username">surf.pics</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores sequi.</p>
                     <div class="comments">Ver los 12 comentarios</div>
                     <div class="time">Hace 2 horas</div>
                 </footer>
             </article>
+
             <article class="card">
                 <header>
-                    <a href="#surf-pics" class="user-link">
+                    <div class="user-info">
                         <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        <span>surf.pics</span>
-                    </a>
+                        <span class="username">surf.pics</span>
+                    </div>
+                    <button class="more-options disabled" aria-label="Más opciones"><i class="fa fa-ellipsis-h"></i></button>
                 </header>
                 <figure>
                     <img src="data/Image (2).jpg" alt="Ola perfecta para hacer surf al atardecer" loading="lazy">
@@ -68,25 +84,32 @@
                 <footer>
                     <div class="button-wrapper"> 
                         <div class="action-buttons">
-                            <button class="like" aria-label="Me gusta"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                            <button class="send" aria-label="Enviar"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                            <button class="comment" aria-label="Comentar"><i class="fa fa-comment" aria-hidden="true"></i></button>              
+                            <button class="like-btn" aria-label="Me gusta" data-liked="false">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button class="send-btn disabled" aria-label="Enviar"><i class="fa fa-paper-plane"></i></button>
+                            <button class="comment-btn disabled" aria-label="Comentar"><i class="fa fa-comment"></i></button>              
                         </div>
                         <div>
-                            <button class="save" aria-label="Guardar"><i class="fa fa-bookmark" aria-hidden="true"></i></button>
+                            <button class="save-btn" aria-label="Guardar" data-saved="false">
+                                <i class="fa fa-bookmark"></i>
+                            </button>
                         </div>              
                     </div>
-                    <p><a href="#surf-pics" class="user-link"><i class="fa fa-user-circle" aria-hidden="true"></i> surf.pics</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores sequi, enim consequuntur quia ad?</p>
+                    <p class="likes-count">Les gusta a 89 personas</p>
+                    <p class="caption"><span class="username">surf.pics</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores sequi.</p>
                     <div class="comments">Ver los 8 comentarios</div>
                     <div class="time">Hace 5 horas</div>
                 </footer>
             </article>
+
             <article class="card">
                 <header>
-                    <a href="#surf-pics" class="user-link">
+                    <div class="user-info">
                         <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        <span>surf.pics</span>
-                    </a>
+                        <span class="username">surf.pics</span>
+                    </div>
+                    <button class="more-options disabled" aria-label="Más opciones"><i class="fa fa-ellipsis-h"></i></button>
                 </header>
                 <figure>
                     <img src="data/Image (3).jpg" alt="Playa tropical con olas perfectas para principiantes" loading="lazy">
@@ -94,25 +117,32 @@
                 <footer>
                     <div class="button-wrapper"> 
                         <div class="action-buttons">
-                            <button class="like" aria-label="Me gusta"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                            <button class="send" aria-label="Enviar"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                            <button class="comment" aria-label="Comentar"><i class="fa fa-comment" aria-hidden="true"></i></button>              
+                            <button class="like-btn" aria-label="Me gusta" data-liked="false">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button class="send-btn disabled" aria-label="Enviar"><i class="fa fa-paper-plane"></i></button>
+                            <button class="comment-btn disabled" aria-label="Comentar"><i class="fa fa-comment"></i></button>              
                         </div>
                         <div>
-                            <button class="save" aria-label="Guardar"><i class="fa fa-bookmark" aria-hidden="true"></i></button>
+                            <button class="save-btn" aria-label="Guardar" data-saved="false">
+                                <i class="fa fa-bookmark"></i>
+                            </button>
                         </div>              
                     </div>
-                    <p><a href="#surf-pics" class="user-link"><i class="fa fa-user-circle" aria-hidden="true"></i> surf.pics</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores sequi, enim consequuntur quia ad?</p>
+                    <p class="likes-count">Les gusta a 203 personas</p>
+                    <p class="caption"><span class="username">surf.pics</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores sequi.</p>
                     <div class="comments">Ver los 24 comentarios</div>
                     <div class="time">Ayer</div>
                 </footer>
             </article>
+
             <article class="card">
                 <header>
-                    <a href="#surf-pics" class="user-link">
+                    <div class="user-info">
                         <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        <span>surf.pics</span>
-                    </a>
+                        <span class="username">surf.pics</span>
+                    </div>
+                    <button class="more-options disabled" aria-label="Más opciones"><i class="fa fa-ellipsis-h"></i></button>
                 </header>
                 <figure>
                     <img src="data/Image (4).jpg" alt="Surfista esperando la próxima ola en el line-up" loading="lazy">
@@ -120,25 +150,32 @@
                 <footer>
                     <div class="button-wrapper"> 
                         <div class="action-buttons">
-                            <button class="like" aria-label="Me gusta"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                            <button class="send" aria-label="Enviar"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                            <button class="comment" aria-label="Comentar"><i class="fa fa-comment" aria-hidden="true"></i></button>              
+                            <button class="like-btn" aria-label="Me gusta" data-liked="false">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button class="send-btn disabled" aria-label="Enviar"><i class="fa fa-paper-plane"></i></button>
+                            <button class="comment-btn disabled" aria-label="Comentar"><i class="fa fa-comment"></i></button>              
                         </div>
                         <div>
-                            <button class="save" aria-label="Guardar"><i class="fa fa-bookmark" aria-hidden="true"></i></button>
+                            <button class="save-btn" aria-label="Guardar" data-saved="false">
+                                <i class="fa fa-bookmark"></i>
+                            </button>
                         </div>              
                     </div>
-                    <p><a href="#surf-pics" class="user-link"><i class="fa fa-user-circle" aria-hidden="true"></i> surf.pics</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores sequi, enim consequuntur quia ad?</p>
+                    <p class="likes-count">Les gusta a 156 personas</p>
+                    <p class="caption"><span class="username">surf.pics</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores sequi.</p>
                     <div class="comments">Ver los 31 comentarios</div>
                     <div class="time">Hace 2 días</div>
                 </footer>
             </article>
+
             <article class="card">
                 <header>
-                    <a href="#surf-pics" class="user-link">
+                    <div class="user-info">
                         <i class="fa fa-user-circle" aria-hidden="true"></i>
-                        <span>surf.pics</span>
-                    </a>
+                        <span class="username">surf.pics</span>
+                    </div>
+                    <button class="more-options disabled" aria-label="Más opciones"><i class="fa fa-ellipsis-h"></i></button>
                 </header>
                 <figure>
                     <img src="data/Image (5).jpg" alt="Atardecer en la playa después de una sesión de surf" loading="lazy">
@@ -146,15 +183,20 @@
                 <footer>
                     <div class="button-wrapper"> 
                         <div class="action-buttons">
-                            <button class="like" aria-label="Me gusta"><i class="fa fa-heart" aria-hidden="true"></i></button>
-                            <button class="send" aria-label="Enviar"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
-                            <button class="comment" aria-label="Comentar"><i class="fa fa-comment" aria-hidden="true"></i></button>              
+                            <button class="like-btn" aria-label="Me gusta" data-liked="false">
+                                <i class="fa fa-heart"></i>
+                            </button>
+                            <button class="send-btn disabled" aria-label="Enviar"><i class="fa fa-paper-plane"></i></button>
+                            <button class="comment-btn disabled" aria-label="Comentar"><i class="fa fa-comment"></i></button>              
                         </div>
                         <div>
-                            <button class="save" aria-label="Guardar"><i class="fa fa-bookmark" aria-hidden="true"></i></button>
+                            <button class="save-btn" aria-label="Guardar" data-saved="false">
+                                <i class="fa fa-bookmark"></i>
+                            </button>
                         </div>              
                     </div>
-                    <p><a href="#surf-pics" class="user-link"><i class="fa fa-user-circle" aria-hidden="true"></i> surf.pics</a> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores sequi, enim consequuntur quia ad?</p>
+                    <p class="likes-count">Les gusta a 312 personas</p>
+                    <p class="caption"><span class="username">surf.pics</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis maiores sequi.</p>
                     <div class="comments">Ver los 45 comentarios</div>
                     <div class="time">Hace 3 días</div>
                 </footer>
@@ -162,5 +204,10 @@
         </section>
     </main>
 
+    <footer class="page-footer">
+        <p>Diseñado por <a href="https://github.com/MarayaBrown" target="_blank" rel="noopener">María Brown</a></p>
+    </footer>
+
+    <script src="js/interactions.js"></script>
 </body>
 </html>
